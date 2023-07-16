@@ -39,12 +39,12 @@
                 </form>
             </dialog>
         </div>
-        <nav class="navbar bg-base-300 rounded-2xl justify-between">
-            <div id="logo"><img src="zoogle.ico"></div>
-            <div id="searchBar">
-                <div class="join">
-                    <div>
-                        <input class="input join-item" placeholder="Search..."/>
+        <nav class="navbar bg-base-300 rounded-3xl gap-5 justify-between">
+            <div id="logo"><img width="50" height="50" src="zoogle.ico"></div>
+            <div id="searchBar" class="w-full">
+                <div class="join w-full">
+                    <div class="w-full">
+                        <input class="input w-full bg-neutral-focus join-item" placeholder="Search..."/>
                     </div>
                     <button class="btn join-item hover:bg-base-100 no-animation">🔍</button>
                 </div>
@@ -61,7 +61,14 @@
                   </label>
                 </div>
             </div>
-            <div id="profile">login</div>
+            <div id="profile">
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn m-1">prof</label>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-neutral rounded-box w-52">
+                      <li><a>Log In</a></li>
+                    </ul>
+                </div>
+            </div>
             </div>
         </nav>
         <div id="apps">modal</div>

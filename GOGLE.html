@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zoogle</title>
+        <link rel="icon" type="image/x-icon" href="zoogle.ico">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="jquery-3.6.4.min.js"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  }
+                }
+              }
+            }
+          </script>
+    </head>
+    <header class="flex items-center p-5 gap-2">
+        <div id="filters">
+            <button class="btn" onclick="filters_modal_1.showModal()">Filters</button>
+            <dialog id="filters_modal_1" class="modal">
+                <form method="dialog" class="modal-box">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+                    <h3 class="font-bold text-lg">Filters</h3>
+                    <div class="divider"></div>
+                    <div class="flex flex-wrap gap-5">
+                        <button class="btn join-item">Images</button>
+                        <button class="btn join-item">News</button>
+                        <button class="btn join-item">Videos</button>
+                        <button class="btn join-item">Maps</button>
+                        <button class="btn join-item">Shopping</button>
+                        <button class="btn join-item">Books</button>
+                        <button class="btn join-item">Flights</button>
+                        <button class="btn join-item">Finance</button>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <nav class="navbar bg-base-300 rounded-2xl justify-between">
+            <div id="logo"><img src="zoogle.ico"></div>
+            <div id="searchBar">
+                <div class="join">
+                    <div>
+                        <input class="input join-item" placeholder="Search..."/>
+                    </div>
+                    <button class="btn join-item hover:bg-base-100 no-animation">🔍</button>
+                </div>
+            </div>
+            <div>
+            <div id="buttonGroup" class="join">
+                <button id="settings" class="btn btn-circle join-item">⚙️</button>
+                <div id="LightDark">
+                    <label class="btn btn-circle swap swap-rotate join-item">
+                    <!-- this hidden checkbox controls the state -->
+                    <input type="checkbox" />
+                    <img class="swap-on fill-current w-5 h-5" src="sun.svg"></img> 
+                    <img class="swap-off fill-current w-5 h-5" src="moon.svg"></img>
+                  </label>
+                </div>
+            </div>
+            <div id="profile">login</div>
+            </div>
+        </nav>
+        <div id="apps">modal</div>
+    </header>
+</html>
+
+
+<!-- 
+    TODO:
+        Navbar:
+            - add settings button slidein menu from bottom maybe
+            - make light/dark mode work (maybe after rest is done)
+                - prob gonna have to find out how to use theme stuff
+            - make profile thing existent with dropdown to left menu
+            - make "apps" button/modal
+-->

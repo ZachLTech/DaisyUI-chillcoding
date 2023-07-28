@@ -61,7 +61,34 @@
                     <div class="flex-none hidden lg:block">
                         <!-- Settings And Switcher Buttons -->
                         <div id="buttonGroup" class="join">
-                            <button id="settings" class="btn btn-circle join-item">⚙️</button>
+                          <!--Settings Button/Dropdown-->
+                            <div class="dropdown dropdown-bottom dropdown-end">
+                              <label tabindex="0" class="btn btn-circle join-item">⚙️</label>
+                              <ul tabindex="0" class="dropdown-content z-[1] menu bg-transparent rounded-box w-52">
+                                <ul class="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
+                                  <p class="font-bold text-lg ml-1 mb-1 text-primary-content text-center">Settings</p>
+                                  <a class="ml-4">General</a>
+                                  <li>
+                                    <ul>
+                                      <li><a>Option 1</a></li>
+                                      <li><a>Option 2</a></li>
+                                      <li><a>Option 3</a></li>
+                                    </ul>
+                                  </li>
+                                  <a class="ml-4">Preferences</a>
+                                  <li>
+                                    <ul>
+                                      <li><a>Option 1</a></li>
+                                      <li><a>Option 2</a></li>
+                                      <li><a>Option 3</a></li>
+                                      <li><a>Option 4</a></li>
+                                    </ul>
+                                  </li>
+                                    <a class="text-center cursor-pointer">Help</a>
+                                </ul>
+                              </ul>
+                            </div>
+
                             <div id="LightDark" >
                                 <label id="togglerforlightmode" onclick="check()" class="btn btn-circle swap swap-rotate join-item">
                                 <!-- this hidden checkbox controls the state -->
@@ -138,10 +165,10 @@
                         </div>
                         <div class="divider"></div>
                         <p class="normal-case text-xl text-center m-1 font-light">General</p>
-                    <li><a>Settings Option 1</a></li>
-                    <li><a>Settings Option 2</a></li>
-                    <li><a>Settings Option 3</a></li>
-                    <li><a>Settings Option 4</a></li>
+                    <li><a>General Option 1</a></li>
+                    <li><a>General Option 2</a></li>
+                    <li><a>General Option 3</a></li>
+                    <li><a>General Option 4</a></li>
                     <div class="divider"></div>
                     <p class="normal-case text-xl text-center font-light">Preferences</p>
                     <li><a>Preferences Option 1</a></li>
@@ -153,17 +180,60 @@
                 </ul>
             </div>
         </div>
-        <div id="apps">modal</div>
+        <div id="apps">
+          <button class="btn btn-primary" onclick="my_modal_2.showModal()">Apps</button>
+          <dialog id="my_modal_2" class="modal">
+            <form method="dialog" class="modal-box flex flex-col gap-8">
+              <div class="card bg-base-100 h-32 shadow-xl image-full">
+                <figure style="background-image: url(https://media.tenor.com/aBCE0whmGAIAAAAC/typing.gif); background-size: cover;"></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Docs</h2>
+                  <p>Write documents with this very interesting (and not real) app and do document things</p>
+                </div>
+              </div>
+              <div class="card bg-base-100 h-32 shadow-xl image-full">
+                <figure style="background-image: url(https://i.gifer.com/7iQi.gif); background-size: cover;"></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Sheets</h2>
+                  <p>Make graphs and tables alongside doing sheet related activities</p>
+                </div>
+              </div>
+              <div class="card bg-base-100 h-32 shadow-xl image-full">
+                <figure style="background-image: url(https://i.gifer.com/7AHd.gif); background-size: cover;"></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Slides</h2>
+                  <p>Form dynamic slideshows or presentations with other slide features</p>
+                </div>
+              </div>
+              <div class="card bg-base-100 h-32 shadow-xl image-full mb-5">
+                <figure style="background-image: url(https://tadabase-docs-assets.s3.amazonaws.com/uploads/images/gallery/2020-11/multi-step-forms.gif); background-size: cover;"></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Forms</h2>
+                  <p>Create forms for others or surveys plus features that a form app would have</p>
+                </div>
+              </div>
+            </form>
+            <form method="dialog" class="modal-backdrop">
+              <button>close</button>
+            </form>
+          </dialog>
+        </div>
     </header>
 </html>
 
-
-<!-- 
-    TODO:
-        Navbar:
-            - add settings button slidein menu from bottom maybe
-            - make light/dark mode work (maybe after rest is done)
-                - prob gonna have to find out how to use theme stuff
-            - make profile thing existent with dropdown to left menu
-            - make "apps" button/modal
+<!--TODOS-->
+<!--NAVBAR-COMPLETE->
+    Navbar:
+        - add settings button slidein menu from bottom maybe
+        - make light/dark mode work (maybe after rest is done)
+            - prob gonna have to find out how to use theme stuff
+        - make profile thing existent with dropdown to left menu
+        - make "apps" button/modal
+-->
+<!--Body-Incomplete->
+    Grid:
+      -figure that out how each card is gonna work and different filters & such
+-->
+<!--Footer-Incomplete->
+    Use Daisy
 -->
